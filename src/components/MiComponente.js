@@ -1,38 +1,39 @@
 import React from 'react';
+import '../assets/css/MiComponente.css'
 
-class MiComponente extends React.Component{
+class MiComponent extends React.Component{
 
-
+    state = {
+        show: true
+    }
+    
     render(){
 
-        let persona = {
+        
+        /*let persona = {
             nombre: 'Carlos',
             apellido: 'Ceballo',
             ocupaciones: [ 'estudiante', 'emprendedor'],
             edad: '24'
-        };
+        };*/
 
-        return(
+        if(this.state.show){
+        
+            return(
 
-            <React.Fragment>
-                <h1>{persona.nombre + ' ' + persona.apellido}</h1>
-                <h2>Edad: {persona.edad}</h2>
+                <React.Fragment id = "componente">
+                    
+                    <h1>{this.props.mytxt}</h1>
 
-                <ol>
-                    {
-                        persona.ocupaciones.map((ocupaciones, i) => {
-                            return(
-
-                            <li key = {i} >{ocupaciones}</li>
-                            );
-                        })
-                    }
-                </ol>
-
-            </React.Fragment>
-        );
+                </React.Fragment>
+            );
+        }else{
+            return <h1>Error 404 NOT FOUND</h1>;
+        }
     }
 
 }
 
-export default MiComponente;
+
+
+export default MiComponent;

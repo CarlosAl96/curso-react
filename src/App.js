@@ -2,26 +2,15 @@ import './assets/css/App.css';
 
 //Importo componentes
 
-import MiComponente from './components/MiComponente.js';
-
-function HelloWorld(props){
-  
-
-  return(
-
-    <div id="hellow">
-        {props.mytext}
-    </div>
-
-  );
-}
+import MiComponent from './components/MiComponente.js';
 
 function App() {
 
   return (
     <div className="App">
-      <HelloWorld mytext = "PutoHola Mundo"/>
-      <MiComponente/>
+      <MiComponent mytxt = "Hola "/>
+      <MiComponent mytxt = "como "/>
+      <MiComponent mytxt = "estas? "/>
     </div>
   );
 }
