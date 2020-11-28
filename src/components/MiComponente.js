@@ -7,6 +7,11 @@ class MiComponent extends React.Component{
         show: true
     }
     
+    cambiarEstado = () => {
+
+        this.setState({ show : !this.state.show })
+    }
+
     render(){
 
         
@@ -21,14 +26,21 @@ class MiComponent extends React.Component{
         
             return(
 
-                <React.Fragment id = "componente">
+                <div className = "componente">
                     
                     <h1>{this.props.mytxt}</h1>
 
-                </React.Fragment>
+                    <button onClick={ this.cambiarEstado }>SHOW</button>
+
+                </div>
             );
         }else{
-            return <h1>Error 404 NOT FOUND</h1>;
+            return (
+                <div className = "componente" >
+                    <h1>Error 404 NOT FOUND</h1>
+                    <button onClick={ this.cambiarEstado }>SHOW</button>
+                </div>
+            );
         }
     }
 
