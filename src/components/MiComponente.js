@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import '../assets/css/MiComponente.css'
 
 class MiComponent extends React.Component{
@@ -15,12 +15,12 @@ class MiComponent extends React.Component{
     render(){
 
         
-        /*let persona = {
+        let persona = {
             nombre: 'Carlos',
             apellido: 'Ceballo',
             ocupaciones: [ 'estudiante', 'emprendedor'],
             edad: '24'
-        };*/
+        };
 
         if(this.state.show){
         
@@ -48,4 +48,4 @@ class MiComponent extends React.Component{
 
 
 
-export default MiComponent;
+export default MiComponent;*/

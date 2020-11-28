@@ -1,18 +1,19 @@
+import React from 'react';
 import './assets/css/App.css';
+import tasks from './sample/tasks.json';
+import Tasks from './components/Tasks';
 
-//Importo componentes
+class App extends React.Component{
 
-import MiComponent from './components/MiComponente.js';
+  state = {
+    tasks: tasks
+  }
 
-function App() {
+    render(){
 
-  return (
-    <div className="App">
-      <MiComponent mytxt = "Hola "/>
-      <MiComponent mytxt = "como "/>
-      <MiComponent mytxt = "estas? "/>
-    </div>
-  );
+      return(
+        <Tasks tasks = { this.state.tasks }/>
+      )
+    }
 }
-
 export default App;
