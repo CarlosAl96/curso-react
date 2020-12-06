@@ -4,19 +4,21 @@ import React from 'react';
 class TaskForm extends React.Component{
 
     state = {
-        titulo: '',
-        descripcion: '' 
+        title: '',
+        description: '' 
     }
     onSubmit = (event) => {
 
-        console.log('enviando')
-        event.preventDefault();
+        this.props.addTask(this.state.title, this.state.description)
+        event.preventDefault()
         
     }
 
     onChange = (event) => {
 
-        console.log(event.target.value)
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     }
 
     render(){
@@ -25,15 +27,17 @@ class TaskForm extends React.Component{
 
             <form onSubmit={this.onSubmit}>
                 <input 
+                    name = 'title'
                     type = 'text' 
                     placeholder = 'Write a Task' 
                     onChange={this.onChange} 
-                    value={this.state.titulo}></input>
+                    value={this.state.title}></input>
                 <br/>
                 <textarea 
+                    name = 'description'
                     placeholder='Write a Description' 
                     onChange={this.onChange} 
-                    value={this.state.descripcion}/>
+                    value={this.state.description}/>
                 <br/>
                 <input type='submit' />
             </form>

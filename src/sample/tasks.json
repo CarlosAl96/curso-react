@@ -2,19 +2,19 @@
     {
         "id": 0,
         "title": "task cero",
-        "descirption": "lorem ipsum",
+        "description": "lorem ipsum",
         "done": false
     },
     {
         "id": 1,
         "title": "task one",
-        "descirption": "lorem ipsum",
+        "description": "lorem ipsum",
         "done": false
     },
     {
         "id": 2,
         "title": "task two",
-        "descirption": "lorem ipsum",
+        "description": "lorem ipsum",
         "done": true
     }
 ]
